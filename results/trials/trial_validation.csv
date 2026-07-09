@@ -1,0 +1,23 @@
+symbol,ccRCC_trials_total,validation,evidence,example_ncts
+CA9,53,DIRECT,girentuximab radioconjugates & CAIX PET; ¹⁷⁷Lu-girentuximab+cabo+nivo,NCT05663710;NCT00199875;NCT07590310
+CD70,32,DIRECT,CD70 CAR-T / CAR-NKT / anti-CD70 T-cell (ALLO-316 etc.) in RCC & solid tumors,NCT04696731;NCT06870279;NCT07647744
+HILPDA,2,BIOMARKER,only appears in a peptide-vaccine trial & a hypoxia-biomarker study; no HILPDA-directed agent,NCT01254838;NCT05214885
+SLC2A1,1,BIOMARKER,single hit is a VEGFR/EGFR-TKI (vandetanib) trial; GLUT1 not the target,NCT01372813
+HAVCR1,1,BIOMARKER,"KIM-1 studied as a urinary detection marker, not a therapeutic target",NCT01063998
+POSTN,0,NONE,0 RCC trials,
+SLC16A3,0,NONE,0 RCC trials (MCT4),
+COL23A1,0,NONE,0 RCC trials,
+NPTX2,0,NONE,0 RCC trials,
+SCARB1,0,NONE,0 RCC trials,
+SLC2A3,0,NONE,0 RCC trials (GLUT3),
+HAPLN1,0,NONE,0 RCC trials,
+VHL,31,BIOMARKER,hits are VHL-disease natural-history or genomically-defined RCC; VHL not directly drugged,NCT03749980;NCT04068831
+SETD2,2,SYNTH_LETHAL,"AZD1775 (adavosertib, WEE1i) in SETD2-deficient tumors — validates Route-3 synthetic lethality",NCT03284385
+PBRM1,1,BIOMARKER,"only an axitinib expanded-access program; PBRM1 used as IO-response biomarker, not targeted",NCT05941637
+KDM5C,0,NONE,0 target-directed RCC trials,
+BAP1,5,SYNTH_LETHAL,"PARP inhibitors (niraparib, olaparib) in BAP1/DDR-mutant RCC — validates Route-3 DDR synthetic lethality",NCT03207347;NCT03786796
+EPAS1(HIF2a),32,EFFECTOR,belzutifan Phase 3 in ccRCC (+combos); HIF-2α = VHL's downstream effector,NCT07227402;NCT05468697
+KDR(VEGFR2),520,EFFECTOR,VEGFR-TKI backbone of ccRCC care (sunitinib/pazopanib/axitinib/cabo/lenva/tivo) — 520 trials,
+MET,110,EFFECTOR,cabozantinib & MET inhibitors — 110 trials,
+MTOR,158,EFFECTOR,everolimus/temsirolimus (approved in RCC) — 158 trials,
+VEGFA,113,EFFECTOR,bevacizumab (approved +IFN in RCC) — 113 trials,

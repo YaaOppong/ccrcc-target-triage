@@ -1,0 +1,6 @@
+# Python 3.11 — ccRCC drug-target triage
+numpy
+pandas
+scipy
+statsmodels
+matplotlib

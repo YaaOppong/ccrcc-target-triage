@@ -1,0 +1,15 @@
+# Environment snapshot — CPTAC ccRCC drug-target triage
+# Python 3.11.15 (conda env "python")
+matplotlib==3.11.0
+numpy==2.4.6
+pandas (conda build 1764614597890)
+scipy==1.17.1
+statsmodels (conda build 1764983256123)
+# stdlib: urllib, json, time, collections, datetime
+# External APIs (snapshot date in methods.md):
+#   Open Targets Platform v4 GraphQL — api.platform.opentargets.org
+#   ChEMBL — MCP connector (target_search, get_mechanism)
+#   Human Protein Atlas — proteinatlas.org JSON
+#   RCSB PDB — search.rcsb.org/rcsbsearch/v2
+#   UniProt — rest.uniprot.org
+#   LinkedOmics CPTAC-CCRCC — linkedomics.org

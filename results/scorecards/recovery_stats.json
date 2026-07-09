@@ -1,0 +1,19 @@
+{
+  "method": "single expression-driven discovery; drug/trial data held out of all selection and scoring",
+  "n_candidates": 12,
+  "n_direct_drug_antigens": 2,
+  "ranks_of_drugged_antigens": {
+    "CA9": 3,
+    "CD70": 1
+  },
+  "both_in_top3_hypergeom_p": 0.0455,
+  "both_in_top2_hypergeom_p": 0.0152,
+  "both_in_top2_observed": false,
+  "mannwhitney_validated_gt_rest_U": 19.0,
+  "mannwhitney_p": 0.0303,
+  "CA9_recovery": "fully mechanical — survived every filter with no manual call; RNA log2FC=6.02 (rank 1 of 12)",
+  "CD70_recovery": "data-retained — immune_rho=0.118 (n.s.); CD70 sits on the tumour-intrinsic side of the immune filter and is kept on its own data, not by any manual override",
+  "immune_filter": "data-driven: Spearman rho vs 16-marker leukocyte signature across 110 tumours; exclude rho>=0.40",
+  "immune_filter_validation": "leukocyte markers separate cleanly (rho 0.48–0.83) from the surface candidates (all <0.30), giving a wide margin at the rho>=0.40 exclusion threshold",
+  "driver_overlap": "0/5 mutation drivers appear in the expression-derived surface/secreted set"
+}

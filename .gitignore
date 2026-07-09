@@ -1,0 +1,26 @@
+# ---- raw input data (large; link, don't bundle) ----
+data/
+*.cct
+*.tsi
+*.cptac
+
+# ---- scratch / intermediate ----
+handoff/
+_scratch/
+*.tmp
+
+# ---- python ----
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.python-version
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

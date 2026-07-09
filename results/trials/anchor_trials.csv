@@ -1,0 +1,7 @@
+target,nct,label,phase,status,enrollment,sponsor,interventions
+CA9,NCT05663710,¹⁷⁷Lu-girentuximab + cabozantinib + nivolumab,PHASE1/PHASE2,RECRUITING,100,M.D. Anderson Cancer Center,177Lu girentuximab; Nivolumab; Cabozantinib; ArabinoFuranosylGuanine [18F]F-AraG
+CD70,NCT04696731,ALLO-316 (allogeneic CD70 CAR-T),PHASE1,ACTIVE_NOT_RECRUITING,120,Allogene Therapeutics,ALLO-316; ALLO-647; Fludarabine; Cyclophosphamide
+EPAS1→VHL,NCT07227402,belzutifan + zanzalintinib vs cabozantinib,PHASE3,RECRUITING,904,Merck Sharp & Dohme LLC,Belzutifan; Zanzalintinib; Cabozantinib
+BAP1,NCT03207347,niraparib (PARPi),PHASE2,COMPLETED,37,University of Florida,Niraparib
+BAP1,NCT03786796,olaparib (PARPi),PHASE2,RECRUITING,20,Sidney Kimmel Comprehensive Cancer Center at Johns Hopkins,Olaparib
+SETD2,NCT03284385,adavosertib (WEE1i),PHASE2,ACTIVE_NOT_RECRUITING,18,National Cancer Institute (NCI),Adavosertib

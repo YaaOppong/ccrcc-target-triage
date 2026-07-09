@@ -1,0 +1,6 @@
+symbol,locus,mutation_freq,lesion_type,consequence,in_surface_target_set
+VHL,3p25.3,0.85,LoF tumour suppressor,HIF-2α/VEGF axis stabilised,No
+PBRM1,3p21.1,0.4,LoF tumour suppressor,SWI/SNF chromatin remodelling,No
+SETD2,3p21.31,0.12,LoF tumour suppressor,H3K36me3 loss,No
+BAP1,3p21.1,0.1,LoF tumour suppressor,nuclear deubiquitinase loss,No
+KDM5C,Xp11.22,0.07,LoF tumour suppressor,H3K4 demethylase loss,No
