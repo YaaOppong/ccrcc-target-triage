@@ -35,8 +35,7 @@ The candidate list narrows like this (full detail in [`docs/methods.md`](docs/me
 > **▶ [View the live interactive report](https://YaaOppong.github.io/ccrcc-target-triage/)** —
 > sortable scorecard with live weight sliders, per-gene evidence, the blind-recovery test, the
 > immune filter, mutation-driver context, and the full write-up and methods, all in the browser.
-> (Or open [`index.html`](index.html) locally.) If the link 404s, enable **GitHub Pages** first
-> (see below).
+> (Or open [`index.html`](index.html) locally.) 
 
 ---
 
