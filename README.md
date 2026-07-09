@@ -32,7 +32,7 @@ The candidate list narrows like this (full detail in [`docs/methods.md`](docs/me
    →  12  + immune-decoy filter, top 12 by fold-change   ← the scored list (n = 12)
 ```
 
-> **▶ [View the live interactive report](https://YaaOppong.github.io/ccrc-target-triage/)** —
+> **▶ [View the live interactive report](https://YaaOppong.github.io/ccrcc-target-triage/)** —
 > sortable scorecard with live weight sliders, per-gene evidence, the blind-recovery test, the
 > immune filter, mutation-driver context, and the full write-up and methods, all in the browser.
 > (Or open [`index.html`](index.html) locally.) If the link 404s, enable **GitHub Pages** first
@@ -42,7 +42,7 @@ The candidate list narrows like this (full detail in [`docs/methods.md`](docs/me
 
 ## The result in one figure
 
-![Triage scorecard]({{artifact:f27b1719-7513-460c-a2d3-b4e3a7c9d31d}})
+![Triage scorecard](figures/triage_scorecard.png)
 
 Run blind to drug knowledge, the method ranks 12 surface/secreted candidates. When drug status is
 revealed, **the two ccRCC antigens with a direct therapeutic — CA9 and CD70 — both land in the
@@ -95,7 +95,7 @@ See [`methods.md`](methods.md) for full definitions.
 
 ## What the immune filter does
 
-![Immune filter]({{artifact:80d9e619-7c36-437a-9b8c-9bce166c7fd4}})
+![Immune filter](figures/immune_filter.png)
 
 The main false-positive mode in bulk-tumour overexpression screens is that "tumour-up" genes are
 markers of infiltrating leukocytes. The filter separates these from tumour-cell surface targets
@@ -121,7 +121,7 @@ expression method and the mutation landscape point at disjoint, complementary ta
 
 ## Robustness & caveats
 
-![Weight sensitivity]({{artifact:da396350-fe3c-4aa1-b2ed-122f03def334}})
+![Weight sensitivity](figures/weight_sensitivity.png)
 
 - **Weight sensitivity:** across 2000 random weightings, **CD70 is a robust #1** (P(rank 1) = 0.69).
   The interactive report has live weight sliders to re-rank under your own priorities.
@@ -130,8 +130,12 @@ expression method and the mutation landscape point at disjoint, complementary ta
   1.5). Treat as a biology lead, not a ready antigen.
 - **Novelty is not scored** — it is a property of the drug landscape (held out). Discussed
   qualitatively in [`results.md`](results.md).
-- **Trial existence ≠ efficacy** — anchor trials are small, early-phase (n ≈ 18–120). Recovery
-  p-values are nominal and modest (0.03–0.05) on a 12-gene list. Nothing here is clinical guidance.
+- **The recovery test is a soft check, not proof.** It asks whether the drug-blind top hits already
+  have a direct-acting agent in the clinic - the "anchors" being CA9 (¹⁷⁷Lu-girentuximab, Phase 1/2)
+  and CD70 (ALLO-316 CAR-T, Phase 1). **Both are investigational, not approved ccRCC therapeutics.**
+  A drug reaching trials is not evidence it *works*; these are small, early-phase studies (~100–120
+  patients each); and on a 12-gene list the recovery p-values (0.03–0.05) are borderline. Nothing
+  here is clinical guidance.
 
 ---
 
@@ -171,7 +175,7 @@ the held-out recovery test.
 2. **Settings → Pages → Build and deployment → Source: Deploy from a branch.**
 3. Select branch `main`, folder `/ (root)`, then **Save**.
 4. After ~1 minute the report is live at
-   [`https://YaaOppong.github.io/ccrc-target-triage/`](https://YaaOppong.github.io/ccrc-target-triage/).
+   [`https://YaaOppong.github.io/ccrcc-target-triage/`](https://YaaOppong.github.io/ccrcc-target-triage/).
 
 The HTML is self-contained (figures embedded as base64), so it also opens directly from disk.
 

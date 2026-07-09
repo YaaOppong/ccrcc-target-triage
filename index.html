@@ -110,7 +110,7 @@ with a direct therapeutic both land in the top 3.
 <b>CA9</b> (girentuximab radioconjugate, NCT05663710) and <b>CD70</b> (anti-CD70 CAR-T ALLO-316, NCT04696731).
 Neither the drug nor the trial was used in selection or scoring.</p>
 <div class="kv" id="rec-kv"></div>
-<div class="flag">Trial existence is not efficacy — anchor trials are small, early-phase (n &approx; 18&ndash;120), and the recovery p-values are nominal and modest on a 12-gene list.</div>
+<div class="flag">A soft check, not proof: the CA9 and CD70 anchors (girentuximab radioconjugate; ALLO-316 CAR-T) are investigational, early-phase agents &mdash; not approved ccRCC therapeutics &mdash; a drug reaching trials is not evidence it works, and on a 12-gene list the recovery p-values are borderline.</div>
 <ul>
 <li><b>CA9</b> is a fully mechanical recovery: it survived every filter with no manual call and carries the strongest RNA overexpression in the set (log2FC = 6.02).</li>
 <li><b>CD70</b> is retained on its own data — tumour-intrinsic by the immune filter (&rho; = 0.118, n.s.), not a leukocyte marker — and tops the composite.</li>
@@ -136,7 +136,7 @@ Leukocyte markers land at &rho; 0.48&ndash;0.83; every retained candidate is bel
 </div>
 <div class="panel prose" id="p-methods">
 <h1>CPTAC ccRCC Drug-Target Discovery — Methods</h1>
-<p><b>Analyst:</b> Claude Science · <b>Dataset:</b> CPTAC clear cell renal cell carcinoma (ccRCC) discovery cohort — Clark DJ <i>et al.</i>, <i>Cell</i> 2019, DOI <a href="https://doi.org/10.1016/j.cell.2019.10.007">10.1016/j.cell.2019.10.007</a> <b>Disease ontology:</b> MONDO_0005005 · <b>Organism:</b> <i>Homo sapiens</i> (taxon 9606)</p>
+<p><b>Dataset:</b> CPTAC clear cell renal cell carcinoma (ccRCC) discovery cohort — Clark DJ <i>et al.</i>, <i>Cell</i> 2019, DOI <a href="https://doi.org/10.1016/j.cell.2019.10.007">10.1016/j.cell.2019.10.007</a> <b>Disease ontology:</b> MONDO_0005005 · <b>Organism:</b> <i>Homo sapiens</i> (taxon 9606)</p>
 <h2>In plain terms</h2>
 <ol>
 <li><b>Find what the tumour makes too much of.</b> Using the CPTAC ccRCC data, we find genes whose <b>protein</b> is much higher in tumour than in normal kidney, and keep only those where the <b>RNA</b> agrees. (Protein is the lead evidence; RNA is corroboration.)</li>
@@ -251,7 +251,7 @@ proteins, so they lie outside the target space of this method. <b>0 of 5 appear 
 <table id="tbl-drv"><thead><tr><th>Driver</th><th class="num">Freq</th><th>Consequence</th><th>Adjacent clinical approach</th></tr></thead><tbody></tbody></table>
 <p class="note" style="margin-top:12px">The expression method and the mutation landscape point at disjoint, complementary target spaces.</p>
 <h2>Limitations</h2>
-<p>Trial existence is not efficacy &mdash; the anchor trials are small, early-phase (n &asymp; 18&ndash;120). The recovery p-values are nominal and modest (0.03&ndash;0.05) on a 12-gene list. The method finds tumour-vs-normal overexpressed surface proteins; it is blind to targets that are not overexpressed (e.g. the driver suppressors) and to intracellular or fusion-driven targets.</p>
+<p>The recovery test is a soft validation, not proof. It checks the drug-blind ranking against which top hits already have a direct-acting agent in the clinic (anchors: girentuximab radioconjugate for CA9, Phase 1/2; ALLO-316 CAR-T for CD70, Phase 1) &mdash; both investigational, not approved ccRCC therapeutics. A drug reaching trials does not establish efficacy, these are small early-phase studies (~100&ndash;120 patients each), and on a 12-gene list the recovery p-values (0.03&ndash;0.05) are borderline. The method finds tumour-vs-normal overexpressed surface proteins; it is blind to targets that are not overexpressed (e.g. the driver suppressors) and to intracellular or fusion-driven targets.</p>
 </div>
 <div class="panel prose" id="p-nextsteps">
 <h1>Next steps</h1>

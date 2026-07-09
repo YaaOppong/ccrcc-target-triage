@@ -1,6 +1,6 @@
 # CPTAC ccRCC Drug-Target Discovery — Methods
 
-**Analyst:** Claude Science · **Dataset:** CPTAC clear cell renal cell carcinoma (ccRCC)
+**Dataset:** CPTAC clear cell renal cell carcinoma (ccRCC)
 discovery cohort — Clark DJ *et al.*, *Cell* 2019, DOI
 [10.1016/j.cell.2019.10.007](https://doi.org/10.1016/j.cell.2019.10.007)
 **Disease ontology:** MONDO_0005005 · **Organism:** *Homo sapiens* (taxon 9606)

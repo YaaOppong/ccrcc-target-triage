@@ -100,7 +100,10 @@ target. Treat it as a biology lead, not a ready-made antigen.
 tumour grade, and both only marginally (BH-FDR ≈ 0.047, ρ ≈ 0.27, ~7 % of variance). CA9 and CD70
 do not track grade. This is a weak signal and is not overstated.
 
-**Limitations.** Trial existence is not efficacy — the anchor trials are small, early-phase
-(n ≈ 18–120). The recovery p-values are nominal and modest (0.03–0.05) on a 12-gene list. The
+**Limitations.** The recovery test is a soft validation, not proof. It checks the drug-blind ranking
+against which top hits already have a direct-acting agent in the clinic (the anchors: ¹⁷⁷Lu-girentuximab
+for CA9, Phase 1/2; ALLO-316 CAR-T for CD70, Phase 1) - both investigational, not approved ccRCC
+therapeutics. A drug reaching trials does not establish efficacy, these are small early-phase studies
+(~100–120 patients each), and on a 12-gene list the recovery p-values (0.03–0.05) are borderline. The
 method finds tumour-vs-normal overexpressed surface proteins; it is blind to targets that are not
 overexpressed (e.g. the driver suppressors) and to intracellular or fusion-driven targets.

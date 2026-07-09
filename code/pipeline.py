@@ -41,7 +41,7 @@ NOTES / CAVEATS FOR RE-RUNNERS:
     drug/trial/known-drug evidence enters the score.
   * Some hosts require network allowlisting for linkedomics.org / proteinatlas.org.
 
-Author: Claude Science  |  Date: 2026-07-08
+Date: 2026-07-08
 """
 
 import os, json, time, urllib.request, urllib.parse, urllib.error
@@ -464,9 +464,18 @@ for s in all_syms:
 # NOTE: In this project ChEMBL was queried via the platform's ChEMBL MCP connector:
 #   target_search(gene_symbol=g, organism="Homo sapiens", target_type="SINGLE PROTEIN")
 #   get_mechanism(target_chembl_id=tid)  -> count mechanisms, action types.
-# Results were written to handoff/chembl.json and merged below. The same data are
-# available from the ChEMBL REST API (https://www.ebi.ac.uk/chembl/api/data/).
-chembl=json.load(open("handoff/chembl.json"))
+# Results are bundled at results/evidence/chembl_cache.json (vendored from that run)
+# and merged below. The same data are available from the ChEMBL REST API
+# (https://www.ebi.ac.uk/chembl/api/data/). If the cache is absent the pipeline still
+# runs (ChEMBL is corroboration only; the ranking is drug-blind), so we load it safely.
+_chembl_paths=[os.path.join(os.path.dirname(__file__),"..","results","evidence","chembl_cache.json"),
+               "handoff/chembl.json"]
+chembl={}
+for _p in _chembl_paths:
+    if os.path.exists(_p):
+        chembl=json.load(open(_p)); break
+else:
+    print("WARNING: ChEMBL cache not found; proceeding without ChEMBL corroboration.")
 for s in all_syms:
     c=chembl.get(s,{})
     ev[s]["chembl_target_id"]=c.get("target_chembl_id")
