@@ -168,16 +168,6 @@ Data sources (all public): CPTAC CCRCC proteome & clinical (Clark et al. 2019); 
 Human Protein Atlas; DepMap; gnomAD. Drug/trial annotation (ClinicalTrials.gov) is used only for
 the held-out recovery test.
 
-## Publishing the interactive report on GitHub Pages
-
-1. Push this repository to GitHub.
-2. **Settings → Pages → Build and deployment → Source: Deploy from a branch.**
-3. Select branch `main`, folder `/ (root)`, then **Save**.
-4. After ~1 minute the report is live at
-   [`https://YaaOppong.github.io/ccrcc-target-triage/`](https://YaaOppong.github.io/ccrcc-target-triage/).
-
-The HTML is self-contained (figures embedded as base64), so it also opens directly from disk.
-
 ---
 
 *Scores are a reproducible decision aid derived from public data, not clinical guidance.
