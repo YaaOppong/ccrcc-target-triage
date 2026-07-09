@@ -45,7 +45,7 @@ GROUP_LABEL = {"leukocyte_marker": "leukocyte marker", "surface_candidate": "sur
 fig = plt.figure(figsize=(13.6, 9.4))
 gs = fig.add_gridspec(2, 2, width_ratios=[1.12, 1.0], height_ratios=[1.0, 1.0],
                       hspace=0.30, wspace=0.24, left=0.07, right=0.965, top=0.90, bottom=0.075)
-fig.suptitle("CPTAC ccRCC drug-target discovery — single blind expression-driven method",
+fig.suptitle("CPTAC ccRCC drug-target discovery — drug-blind expression-driven method",
              fontsize=16, fontweight="bold", y=0.965)
 
 # ---- Panel A: rubric heatmap ------------------------------------------------
@@ -110,11 +110,10 @@ axC.legend(handles=[Patch(facecolor=GROUP_COLOR[k], label=GROUP_LABEL[k])
 axD = fig.add_subplot(gs[1, 1])
 sc2 = sc.copy()
 sc2["is_direct"] = sc2["gene"].isin(DIRECT)
-rng = np.random.default_rng(0)
-rows = {"Other candidates\n(n=10)": 0.0, "Direct-drug antigens\n(n=2)": 1.0}
+rows = {"No direct-acting\nagent (n=10)": 0.0, "Target of a direct\nagent (n=2)": 1.0}
 for _, row in sc2.iterrows():
-    grp = "Direct-drug antigens\n(n=2)" if row["is_direct"] else "Other candidates\n(n=10)"
-    yb = rows[grp] + (rng.uniform(-0.14, 0.14) if not row["is_direct"] else 0.0)
+    grp = "Target of a direct\nagent (n=2)" if row["is_direct"] else "No direct-acting\nagent (n=10)"
+    yb = rows[grp]  # categorical rows — no vertical jitter (height carries no meaning)
     if row["is_direct"]:
         axD.scatter(row["composite_0_100"], yb, s=160, color="#2f9e57", zorder=5,
                     edgecolor="black", linewidth=0.8)

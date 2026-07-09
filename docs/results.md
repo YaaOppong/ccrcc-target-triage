@@ -19,8 +19,8 @@ ranks 12 surface/secreted candidates in ccRCC. When drug status is revealed afte
 ccRCC antigens that already have a direct therapeutic — **CA9** and **CD70** — both land in the
 **top 3 of 12** (CD70 #1, CA9 #3). Under a hypergeometric null this is unlikely by chance
 (**p = 0.0455**); the direct-drug antigens also score higher than the rest as a group
-(one-sided Mann–Whitney **p = 0.0303**). The method recovers clinically-validated biology
-without ever being told what is drugged.
+(one-sided Mann–Whitney **p = 0.0303**). The method recovers targets already in clinical
+development without ever being told what is drugged.
 
 ## Ranked candidates (drug-blind composite)
 
@@ -104,6 +104,8 @@ do not track grade. This is a weak signal and is not overstated.
 against which top hits already have a direct-acting agent in the clinic (the anchors: ¹⁷⁷Lu-girentuximab
 for CA9, Phase 1/2; ALLO-316 CAR-T for CD70, Phase 1) - both investigational, not approved ccRCC
 therapeutics. A drug reaching trials does not establish efficacy, these are small early-phase studies
-(~100–120 patients each), and on a 12-gene list the recovery p-values (0.03–0.05) are borderline. The
+(~100–120 patients each), and on a 12-gene list the recovery p-values (0.03–0.05) are borderline.
+Of the 10 non-target candidates, 7 have no ccRCC trials at all; the remaining 3 (HILPDA, SLC2A1/GLUT1,
+HAVCR1/KIM-1) appear in trials only as incidental biomarkers, never as the drug target. The
 method finds tumour-vs-normal overexpressed surface proteins; it is blind to targets that are not
 overexpressed (e.g. the driver suppressors) and to intracellular or fusion-driven targets.

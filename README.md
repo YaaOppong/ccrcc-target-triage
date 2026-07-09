@@ -51,7 +51,7 @@ top 3 of 12** (CD70 #1, CA9 #3):
 - **Score separation:** direct-drug antigens score higher than the rest → one-sided
   Mann–Whitney **p = 0.0303**.
 
-The method recovers clinically-validated biology without being told what is drugged.
+The method recovers targets already in clinical development without being told what is drugged.
 
 ---
 
