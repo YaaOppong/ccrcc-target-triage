@@ -151,7 +151,8 @@ expression method and the mutation landscape point at disjoint, complementary ta
 | [`results/evidence/evidence_detail.json`](results/evidence/evidence_detail.json) | Raw retrieved values + source identifiers per gene |
 | [`methods.md`](methods.md) / [`results.md`](results.md) / [`rubric.md`](rubric.md) | Method, results, rubric |
 | [`figures/`](figures/) | `triage_scorecard.png`, `immune_filter.png`, `weight_sensitivity.png`, supporting figures |
-| [`code/pipeline.py`](code/pipeline.py) | Reproducible pipeline code |
+| [`code/pipeline.py`](code/pipeline.py) | Reproducible pipeline: retrieval → scoring → recovery test |
+| [`code/make_figure.py`](code/make_figure.py) | Regenerates `figures/triage_scorecard.png` from the result files |
 | [`environment_snapshot.txt`](environment_snapshot.txt) | Conda environment snapshot |
 
 ---
@@ -161,7 +162,8 @@ expression method and the mutation landscape point at disjoint, complementary ta
 ```bash
 # Python 3.11; core deps: numpy pandas scipy statsmodels matplotlib
 pip install -r requirements.txt
-python code/pipeline.py
+python code/pipeline.py      # retrieval → scoring → recovery statistics
+python code/make_figure.py   # rebuild figures/triage_scorecard.png from the results
 ```
 
 Data sources (all public): CPTAC CCRCC proteome & clinical (Clark et al. 2019); UniProt;
