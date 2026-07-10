@@ -1,0 +1,7 @@
+# Language stats: this is a Python analysis repo. Exclude the generated interactive
+# report, figures, data outputs, and prose docs so GitHub shows it as Python
+# (the substance) rather than HTML (the embedded report).
+index.html   linguist-documentation
+docs/**      linguist-documentation
+results/**   linguist-generated=true
+figures/**   linguist-generated=true
