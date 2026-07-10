@@ -1,11 +1,13 @@
 # Drug-Target Discovery — Clear Cell Renal Cell Carcinoma (CPTAC)
 
 A reproducible, **drug-blind, expression-driven** discovery method for surface/secreted drug
-targets in **clear cell renal cell carcinoma (ccRCC)**, run on CPTAC proteogenomics
+targets in **clear cell renal cell carcinoma (ccRCC)**, integrating **multi-omic** CPTAC
+proteogenomics — tumour-vs-normal **proteome and transcriptome**
 (Clark DJ *et al.*, *Cell* 2019, [DOI:10.1016/j.cell.2019.10.007](https://doi.org/10.1016/j.cell.2019.10.007)).
 
-The method scores candidates using only the CPTAC expression data and public gene-level
-annotation — **no drug or clinical-trial information enters selection or scoring**. Drug status
+The method scores candidates using only these CPTAC expression matrices (proteome and
+transcriptome) and public gene-level annotation — **no drug or clinical-trial information
+enters selection or scoring**. Drug status
 is revealed only afterwards, to test what the blind ranking recovered.
 
 ### How it works, in plain terms

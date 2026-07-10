@@ -61,7 +61,7 @@ summary{font-weight:600;cursor:pointer}
 <h1>Drug-Target Discovery — Clear Cell RCC</h1>
 <a href="https://github.com/YaaOppong/ccrcc-target-triage" target="_blank" rel="noopener" style="flex:none;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:7px 13px;background:#fff;color:var(--accent);font-weight:600;font-size:13.5px;white-space:nowrap">View source on GitHub ↗</a>
 </div>
-<div class="sub">CPTAC ccRCC proteogenomics (Clark <i>et al.</i>, <i>Cell</i> 2019) &middot; a single drug-blind, expression-driven method &middot; MONDO_0005005</div>
+<div class="sub">CPTAC ccRCC proteogenomics (Clark <i>et al.</i>, <i>Cell</i> 2019) &middot; a drug-blind, multi-omic (proteome + transcriptome) method &middot; MONDO_0005005</div>
 
 <div class="card headline">
 <div style="display:flex;gap:26px;flex-wrap:wrap;align-items:center">
@@ -130,11 +130,11 @@ Leukocyte markers land at &rho; 0.48&ndash;0.83; every retained candidate is bel
 
 <div class="panel prose active" id="p-intro">
 <h1>CPTAC ccRCC Drug-Target Discovery</h1>
-<p><b>Goal.</b> Find and prioritise surface/secreted drug targets in clear cell renal cell carcinoma (ccRCC) using a single expression-driven method, run <b>blind to all drug and clinical-trial information</b>. Drug status is revealed only afterwards, as an independent test of whether the ranking recovered clinically-validated biology.</p>
+<p><b>Goal.</b> Find and prioritise surface/secreted drug targets in clear cell renal cell carcinoma (ccRCC) using a single expression-driven method, run <b>blind to all drug and clinical-trial information</b>. Drug status is revealed only afterwards, as an independent test of whether the ranking recovered targets already in clinical development.</p>
 <h2>In one paragraph</h2>
 <p>Starting from 11,710 proteins measured in CPTAC ccRCC, we kept those over-produced in tumour at both the protein and RNA level (&rarr; 310), narrowed to the ones a drug can physically reach on the cell surface or in secretions (&rarr; 101), removed immune-cell decoys, and took the <b>top 12</b> as the candidate list. Each of the 12 was scored 0&ndash;5 on four qualities &mdash; overexpression, drug-reachability (tractability), safety and selectivity &mdash; from public databases (UniProt, DepMap, gnomAD, HPA); those four combine, by fixed weights, into a single <b>0&ndash;100 composite</b> that ranks them. The whole pipeline was run <b>blind to drug and trial information</b>. Only at the end did we cross-reference the ranking against clinical-trial data &mdash; and the two ccRCC antigens that <i>already</i> have a direct therapeutic (CA9, CD70) both landed in the top 3.</p>
 <h2>Headline</h2>
-<p>When drug status is revealed afterwards, the two ccRCC antigens that already have a direct therapeutic &mdash; <b>CD70</b> and <b>CA9</b> &mdash; both land in the <b>top 3 of 12</b> (CD70 #1, CA9 #3). Under a hypergeometric null this is unlikely by chance (<b>p = 0.0455</b>); the direct-drug antigens also score higher than the rest as a group (one-sided Mann&ndash;Whitney <b>p = 0.0303</b>). The method recovers clinically-validated biology without ever being told what is drugged.</p>
+<p>When drug status is revealed afterwards, the two ccRCC antigens that already have a direct therapeutic &mdash; <b>CD70</b> and <b>CA9</b> &mdash; both land in the <b>top 3 of 12</b> (CD70 #1, CA9 #3). Under a hypergeometric null this is unlikely by chance (<b>p = 0.0455</b>); the direct-drug antigens also score higher than the rest as a group (one-sided Mann&ndash;Whitney <b>p = 0.0303</b>). The method recovers targets already in clinical development without ever being told what is drugged.</p>
 <p class="note">Use the tabs above to move through the analysis: <b>Methods</b> &rarr; the results (<b>Scorecard</b>, <b>Re-rank by weights</b>, <b>Blind recovery</b>, <b>Immune filter</b>, <b>Figures</b>) &rarr; <b>Discussion</b> &rarr; <b>Next steps</b>.</p>
 </div>
 <div class="panel prose" id="p-methods">
