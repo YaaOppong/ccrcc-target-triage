@@ -19,6 +19,8 @@ OUTPUTS (written to CWD):
   evidence_detail.json     raw retrieved annotation values + source identifiers per gene
   recovery_stats.json      blind-recovery statistics (ranks, hypergeom, Mann-Whitney)
   immune_filter.csv        leukocyte-signature Spearman rho per gene (diagnostic)
+  surface_candidates_all.csv  all surface/secreted candidates + immune rho + why each was
+                           dropped (immune_filter / fc_rank_cutoff) — audits the 101 -> 12 step
 
 DATA SOURCES (all public; snapshot taken 2026-07-08):
   LinkedOmics CPTAC-CCRCC            linkedomics.org/data_download/CPTAC-CCRCC
@@ -294,6 +296,19 @@ trackB.to_csv("surface_targets.csv", index=False)
 print("Surface/secreted final (top 12 tumour-intrinsic; data-driven immune filter):")
 print(trackB[["gene","uniprot","prot_log2fc","rna_log2fc","immune_rho","locations"]].to_string(index=False))
 print("\nExcluded (immune_rho>=0.40):", surf_set[surf_set.immune_infiltration_flag].gene.tolist())
+
+# Persist the full surface/secreted set so the 101 -> 12 step is auditable: which genes the
+# immune filter dropped, and which survived it but fell below the top-12 fold-change cut.
+audit=surf_set.assign(
+    dropped_by=np.where(surf_set.immune_infiltration_flag,"immune_filter",
+                np.where(surf_set.gene.isin(trackB.gene),"","fc_rank_cutoff")),
+    retained=surf_set.gene.isin(trackB.gene))
+audit[["gene","uniprot","prot_log2fc","rna_log2fc","immune_rho",
+       "immune_infiltration_flag","dropped_by","retained","locations"]].to_csv(
+    "surface_candidates_all.csv", index=False)
+print(f"Wrote surface_candidates_all.csv: {len(audit)} surface/secreted candidates, "
+      f"{int(surf_set.immune_infiltration_flag.sum())} dropped by immune filter, "
+      f"{len(trackB)} retained after top-12 fold-change cut.")
 
 # ============================================================================
 # STEP 8 — resolve ccRCC disease ontology id (MONDO_0005005)
