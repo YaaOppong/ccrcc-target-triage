@@ -20,10 +20,12 @@ discovery cohort — Clark DJ *et al.*, *Cell* 2019, DOI
    it is by a drug, how safe the target looks, and how selective it is — using public annotation
    databases (UniProt, DepMap, gnomAD, HPA). Each score's exact calculation and source is in
    Step 5.
-6. **Combine the four scores into one 0–100 composite** using fixed weights, and rank the 12.
+6. **Combine the four scores into one 0–100 composite** using fixed weights, and rank. All 101
+   surface candidates are scored, not only the 12 shortlisted, so the selection step is testable.
 7. **Only at the very end** do we look up drug/clinical-trial status — information deliberately
    kept out of every step above — to ask: did this blind method rank the genes that are *already*
-   drug targets near the top? (It did: both land in the top 3.)
+   drug targets near the top? (Partly: CD70, CA9 and ENPP3 rank #2, #4 and #9 of 101, but the
+   enrichment is not significant. See Step 8.)
 
 ## Overview
 
@@ -207,14 +209,27 @@ the scored set is 0/5 — a factual divergence, not a competing ranking.
 ## Step 8 — Blind-recovery test
 
 To ask whether the drug-blind ranking captured actionable biology, we bring in the held-out
-annotation. Two ccRCC antigens are the subject of a **direct** therapeutic (a drug that binds the
-antigen itself): CA9 (girentuximab radioconjugate, NCT05663710) and CD70 (allogeneic anti-CD70
-CAR-T ALLO-316, NCT04696731). We test:
+annotation. The positive set is defined **by rule over all 101 surface candidates**, fixed before
+inspecting which genes it flags:
 
-- **Rank recovery** — a hypergeometric test for both direct-drug antigens landing within the
-  observed top-*k* of the ranked list.
-- **Score separation** — a one-sided Mann–Whitney *U* test comparing the composite scores of the
-  direct-drug antigens against the rest.
+> a gene is a **ccRCC-direct positive** if at least one agent whose Open Targets mechanism target
+> is that gene appears as an intervention in a ClinicalTrials.gov study whose condition is renal
+> cell carcinoma.
+
+This yields **14 positives of 101**. An earlier version instead hand-listed two genes (CA9, CD70)
+chosen after inspecting the final 12; that set was both incomplete and selected on the outcome.
+
+Two tests are reported, because selection and ranking are different claims:
+
+- **Cascade test** — a hypergeometric test asking whether *selection* concentrated positives into
+  the retained 12, drawn from the 101. This is the test the method's own filtering has to pass.
+- **Ranking test** — a one-sided Mann–Whitney *U* test plus top-*k* hypergeometrics over the
+  composite across all 101, unconditional on selection.
+
+Both can record a miss. A statistic computed over only the 12 survivors cannot: it conditions on
+the selection step under test, so any positive discarded earlier is invisible to it. That legacy
+statistic is retained in `recovery_stats.json` under `ranking_given_selection_LEGACY` and is
+explicitly not the headline result.
 
 ## Step 9 — Weight-sensitivity (robustness)
 

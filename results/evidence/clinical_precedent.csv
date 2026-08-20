@@ -1,24 +1,112 @@
-symbol,track,clinical_precedent,n_drugs,max_phase,sm_approved,sm_clinical,ab_approved,ab_clinical,chembl
-BAP1,A_mutation_driver,NONE,0,0,False,False,False,False,CHEMBL1293314
-CA9,B_surface_secreted,APPROVED,4,PHASE_3,True,False,False,True,CHEMBL3594
-CD70,B_surface_secreted,CLINICAL,4,PHASE_2,False,False,False,True,CHEMBL3712913
-COL23A1,B_surface_secreted,NONE,0,0,False,False,False,False,
-EPAS1,(effector),APPROVED,1,APPROVAL,True,False,False,False,CHEMBL1744522
-HAPLN1,B_surface_secreted,NONE,0,0,False,False,False,False,
-HAVCR1,B_surface_secreted,NONE,0,0,False,False,False,False,
-HIF1A,(effector),NONE,0,0,False,False,False,False,CHEMBL4261
-HILPDA,B_surface_secreted,NONE,0,0,False,False,False,False,
-KDM5C,A_mutation_driver,NONE,0,0,False,False,False,False,CHEMBL2163176
-KDR,(effector),APPROVED,75,UNKNOWN,True,False,True,False,CHEMBL279
-MET,(effector),APPROVED,38,PHASE_3,True,False,True,False,CHEMBL3717
-MTOR,(effector),APPROVED,26,PHASE_3,True,False,False,False,CHEMBL2842
-NPTX2,B_surface_secreted,NONE,0,0,False,False,False,False,
-PBRM1,A_mutation_driver,NONE,0,0,False,False,False,False,CHEMBL1795184
-POSTN,B_surface_secreted,NONE,0,0,False,False,False,False,
-SCARB1,B_surface_secreted,NONE,0,0,False,False,False,False,CHEMBL1914272
-SETD2,A_mutation_driver,NONE,0,0,False,False,False,False,CHEMBL3108647
-SLC16A3,B_surface_secreted,NONE,0,0,False,False,False,False,CHEMBL2073663
-SLC2A1,B_surface_secreted,NONE,0,0,False,False,False,False,CHEMBL2535
-SLC2A3,B_surface_secreted,NONE,0,0,False,False,False,False,CHEMBL5215
-VEGFA,(effector),APPROVED,14,PHASE_3,False,False,True,False,CHEMBL1783
-VHL,A_mutation_driver,NONE,0,0,False,False,False,False,CHEMBL3108660
+symbol,n_drugs,max_phase,agents,track
+ADAMTS7,0,0,,B_surface_secreted
+ADGRE2,0,0,,B_surface_secreted
+ADM,1,2,ENIBARCIMAB,B_surface_secreted
+ANGPT2,8,3,AMG-780; CVX-060; FARICIMAB; MEDI-3617; NESVACUMAB; TREBANANIB; VANUCIZUMAB; ZANSECIMAB,B_surface_secreted
+ANGPTL4,0,0,,B_surface_secreted
+BAP1,0,0,,A_mutation_driver
+BTN3A1,0,0,,B_surface_secreted
+BTN3A2,0,0,,B_surface_secreted
+C5AR1,2,2,AVACOPAN; AVDORALIMAB,B_surface_secreted
+CA9,4,3,ETHOXZOLAMIDE; GIRENTUXIMAB; IODINE I 124 GIRENTUXIMAB; SULTHIAME,B_surface_secreted
+CD163,0,0,,B_surface_secreted
+CD180,0,0,,B_surface_secreted
+CD2,2,2,ALEFACEPT; SIPLIZUMAB,B_surface_secreted
+CD300A,0,0,,B_surface_secreted
+CD36,0,0,,B_surface_secreted
+CD4,8,3,CLENOLIXIMAB; IBALIZUMAB; PRILIXIMAB; SEMZUVOLIMAB; TREGALIZUMAB; TRX-1; VRC-01LS; ZANOLIMUMAB,B_surface_secreted
+CD48,0,0,,B_surface_secreted
+CD53,0,0,,B_surface_secreted
+CD68,0,0,,B_surface_secreted
+CD70,4,2,CUSATUZUMAB; MDX-1411; VORSETUZUMAB; VORSETUZUMAB MAFODOTIN,B_surface_secreted
+CDH13,0,0,,B_surface_secreted
+CDH4,0,0,,B_surface_secreted
+COL23A1,0,0,,B_surface_secreted
+COL3A1,2,0,COLLAGENASE CLOSTRIDIUM HISTOLYTICUM; OCRIPLASMIN,B_surface_secreted
+COL5A1,2,0,COLLAGENASE CLOSTRIDIUM HISTOLYTICUM; OCRIPLASMIN,B_surface_secreted
+COL5A2,2,0,COLLAGENASE CLOSTRIDIUM HISTOLYTICUM; OCRIPLASMIN,B_surface_secreted
+COL5A3,2,0,COLLAGENASE CLOSTRIDIUM HISTOLYTICUM; OCRIPLASMIN,B_surface_secreted
+COL8A1,0,0,,B_surface_secreted
+CSPG4,0,0,,B_surface_secreted
+CTHRC1,0,0,,B_surface_secreted
+CXCR4,8,3,BALIXAFORTIDE; BURIXAFOR; CTCE-9908; MAVORIXAFOR; MOTIXAFORTIDE; MSX-122; PLERIXAFOR; ULOCUPLUMAB,B_surface_secreted
+CYBB,0,0,,B_surface_secreted
+ECSCR,0,0,,B_surface_secreted
+EGFR,82,3,ABIVERTINIB; ABIVERTINIB MALEATE; AC-480; AEE-788; AFATINIB; AFATINIB DIMALEATE; ALLITINIB; AMIVANTAMAB; AUMOLERTINIB; AV-412; AZD-3759; AZD-4769; BAFISONTAMAB; BMS-690514; BRIGATINIB; CANERTINIB; CAN,B_surface_secreted
+EMILIN2,0,0,,B_surface_secreted
+ENPP3,1,2,AGS-16C3F,B_surface_secreted
+EPAS1,1,0,BELZUTIFAN,effector
+ERO1A,0,0,,B_surface_secreted
+ESM1,0,0,,B_surface_secreted
+FCER1G,0,0,,B_surface_secreted
+FCGR1A,1,1,MDX-447,B_surface_secreted
+FCGR3A,2,3,BEMARITUZUMAB; IMGATUZUMAB,B_surface_secreted
+FLT1,48,3,4SC-203; AEE-788; AGN-211745; AXITINIB; BMS-690514; BRIVANIB; BRIVANIB ALANINATE; CEDIRANIB; CEP-11981; CEP-5214; DOVITINIB; FAMITINIB; FORETINIB; FRUQUINTINIB; GLESATINIB; IBCASERTIB; ICRUCUMAB; ILOR,B_surface_secreted
+GPNMB,1,0,GLEMBATUMUMAB VEDOTIN,B_surface_secreted
+GZMA,0,0,,B_surface_secreted
+GZMK,0,0,,B_surface_secreted
+HAPLN1,0,0,,B_surface_secreted
+HAPLN3,0,0,,B_surface_secreted
+HAVCR1,0,0,,B_surface_secreted
+HAVCR2,3,3,COBOLIMAB; LOMVASTOMIG; SABATOLIMAB,B_surface_secreted
+HIF1A,0,0,,effector
+HILPDA,0,0,,B_surface_secreted
+HVCN1,0,0,,B_surface_secreted
+ICAM1,3,3,ALICAFORSEN; BI-505; ENLIMOMAB PEGOL,B_surface_secreted
+IGFBP3,0,0,,B_surface_secreted
+IGFLR1,0,0,,B_surface_secreted
+IL32,0,0,,B_surface_secreted
+IL4I1,0,0,,B_surface_secreted
+ITGA5,3,2,ATN-161; PF-04605412; VOLOCIXIMAB,B_surface_secreted
+ITGAL,4,0,EFALIZUMAB; LIFITEGRAST; ODULIMOMAB; ROVELIZUMAB,B_surface_secreted
+ITGAM,1,0,ROVELIZUMAB,B_surface_secreted
+ITGAX,0,0,,B_surface_secreted
+ITGB2,3,0,EFALIZUMAB; LIFITEGRAST; ROVELIZUMAB,B_surface_secreted
+KDM5C,0,0,,A_mutation_driver
+KDR,75,3,4SC-203; AEE-788; ALACIZUMAB PEGOL; ALTIRATINIB; AXITINIB; BFH-772; BMS-690514; BMS-817378; BRIVANIB; BRIVANIB ALANINATE; CABOZANTINIB; CABOZANTINIB S-MALATE; CATEQUENTINIB; CEDIRANIB; CEP-11981; CEP-,effector
+KEL,0,0,,B_surface_secreted
+LAIR1,0,0,,B_surface_secreted
+LILRB1,0,0,,B_surface_secreted
+LILRB2,0,0,,B_surface_secreted
+LILRB4,0,0,,B_surface_secreted
+LOX,0,0,,B_surface_secreted
+LOXL2,2,2,LENUMLOSTAT; SIMTUZUMAB,B_surface_secreted
+LOXL3,0,0,,B_surface_secreted
+LPCAT1,0,0,,B_surface_secreted
+LY86,0,0,,B_surface_secreted
+MET,38,3,ALTIRATINIB; AMG-208; AMG-337; AMIVANTAMAB; AMUVATINIB; ARRY-300; BAFISONTAMAB; BEPERMINOGENE PERPLASMID; BMS-777607; BMS-817378; BPI-9016; CABOZANTINIB; CABOZANTINIB S-MALATE; CAPMATINIB; CAPMATINIB ,B_surface_secreted
+MMP14,2,3,CTS-1027; REBIMASTAT,B_surface_secreted
+MSR1,0,0,,B_surface_secreted
+MTOR,26,3,APITOLISIB; AZD-8055; BGT-226; CC-115; DACTOLISIB; DS-3078A; DS-7423; GEDATOLISIB; INDOXIMOD; OMIPALISIB; ONATASERTIB; OSI-027; PALOMID-529; PANULISIB; PERHEXILINE; PERHEXILINE MALEATE; PF-04691502; P,effector
+NCEH1,0,0,,B_surface_secreted
+NCKAP1L,0,0,,B_surface_secreted
+NEFL,0,0,,B_surface_secreted
+NPTX2,0,0,,B_surface_secreted
+OLFML2A,0,0,,B_surface_secreted
+P2RX7,5,2,AZD9056; CE-224535; EVT401; GSK1482160; JNJ-54175446,B_surface_secreted
+PBRM1,0,0,,A_mutation_driver
+PECAM1,0,0,,B_surface_secreted
+PGF,3,3,AFLIBERCEPT; CONBERCEPT; TB-403,B_surface_secreted
+PLOD3,0,0,,B_surface_secreted
+POSTN,0,0,,B_surface_secreted
+PRF1,0,0,,B_surface_secreted
+PTPRC,2,2,AHN-12; BC8 131I,B_surface_secreted
+RHBDL2,0,0,,B_surface_secreted
+SCARB1,0,0,,B_surface_secreted
+SERPINE1,1,1,ALEPLASININ,B_surface_secreted
+SETD2,0,0,,A_mutation_driver
+SLC16A3,0,0,,B_surface_secreted
+SLC1A4,0,0,,B_surface_secreted
+SLC2A1,0,0,,B_surface_secreted
+SLC2A3,0,0,,B_surface_secreted
+SORCS3,0,0,,B_surface_secreted
+SPARC,0,0,,B_surface_secreted
+TGFB3,3,3,BINTRAFUSP ALFA; FRESOLIMUMAB; LUSPATERCEPT,B_surface_secreted
+TNFAIP6,0,0,,B_surface_secreted
+TRPV2,0,0,,B_surface_secreted
+TYROBP,0,0,,B_surface_secreted
+VCAM1,0,0,,B_surface_secreted
+VEGFA,14,3,ABICIPAR PEGOL; AFLIBERCEPT; BEVACIZUMAB; BEVACIZUMAB GAMMA; BEVASIRANIB; BEVASIRANIB SODIUM; BROLUCIZUMAB; CONBERCEPT; FARICIMAB; MUPARFOSTAT; PEGAPTANIB OCTASODIUM; PEGAPTANIB SODIUM; RANIBIZUMAB; V,effector
+VHL,0,0,,A_mutation_driver
+VIM,1,2,PRITUMUMAB,B_surface_secreted
+VWF,4,2,CAPLACIZUMAB; EGAPTIVON PEGOL; VON WILLEBRAND FACTOR HUMAN; VONICOG ALFA,B_surface_secreted

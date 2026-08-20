@@ -1,19 +1,192 @@
 {
   "method": "single expression-driven discovery; drug/trial data held out of all selection and scoring",
-  "n_candidates": 12,
-  "n_direct_drug_antigens": 2,
-  "ranks_of_drugged_antigens": {
-    "CA9": 3,
-    "CD70": 1
+  "n_surface_candidates": 101,
+  "n_retained_top12": 12,
+  "ccrcc_direct": {
+    "n_positives": 14,
+    "positives": [
+      "ANGPT2",
+      "CA9",
+      "CD4",
+      "CD70",
+      "CXCR4",
+      "EGFR",
+      "ENPP3",
+      "FCGR3A",
+      "FLT1",
+      "HAVCR2",
+      "ITGA5",
+      "MET",
+      "PGF",
+      "TGFB3"
+    ],
+    "cascade_test": {
+      "positives_retained": 2,
+      "expected_by_chance": 1.66,
+      "hypergeom_p": 0.5223
+    },
+    "ranking_test": {
+      "positive_ranks": [
+        2,
+        4,
+        9,
+        16,
+        33,
+        34,
+        51,
+        54,
+        58,
+        61,
+        66,
+        84,
+        96,
+        99
+      ],
+      "top_k_p": {
+        "12": 0.2169,
+        "20": 0.2867,
+        "30": 0.6501
+      },
+      "mannwhitney_U": 656.5,
+      "mannwhitney_p": 0.3221
+    },
+    "misses": {
+      "n": 12,
+      "dropped_by_immune_filter": [
+        "CD4",
+        "FCGR3A"
+      ],
+      "dropped_by_fc_cutoff": [
+        "ANGPT2",
+        "CXCR4",
+        "EGFR",
+        "ENPP3",
+        "FLT1",
+        "HAVCR2",
+        "ITGA5",
+        "MET",
+        "PGF",
+        "TGFB3"
+      ]
+    }
   },
-  "both_in_top3_hypergeom_p": 0.0455,
-  "both_in_top2_hypergeom_p": 0.0152,
-  "both_in_top2_observed": false,
-  "mannwhitney_validated_gt_rest_U": 19.0,
-  "mannwhitney_p": 0.0303,
-  "CA9_recovery": "fully mechanical — survived every filter with no manual call; RNA log2FC=6.02 (rank 1 of 12)",
-  "CD70_recovery": "data-retained — immune_rho=0.118 (n.s.); CD70 sits on the tumour-intrinsic side of the immune filter and is kept on its own data, not by any manual override",
-  "immune_filter": "data-driven: Spearman rho vs 16-marker leukocyte signature across 110 tumours; exclude rho>=0.40",
-  "immune_filter_validation": "leukocyte markers separate cleanly (rho 0.48–0.83) from the surface candidates (all <0.30), giving a wide margin at the rho>=0.40 exclusion threshold",
-  "driver_overlap": "0/5 mutation drivers appear in the expression-derived surface/secreted set"
+  "any_indication": {
+    "n_positives": 26,
+    "positives": [
+      "ADM",
+      "ANGPT2",
+      "C5AR1",
+      "CA9",
+      "CD2",
+      "CD4",
+      "CD70",
+      "CXCR4",
+      "EGFR",
+      "ENPP3",
+      "FCGR1A",
+      "FCGR3A",
+      "FLT1",
+      "HAVCR2",
+      "ICAM1",
+      "ITGA5",
+      "LOXL2",
+      "MET",
+      "MMP14",
+      "P2RX7",
+      "PGF",
+      "PTPRC",
+      "SERPINE1",
+      "TGFB3",
+      "VIM",
+      "VWF"
+    ],
+    "cascade_test": {
+      "positives_retained": 2,
+      "expected_by_chance": 3.09,
+      "hypergeom_p": 0.8712
+    },
+    "ranking_test": {
+      "positive_ranks": [
+        2,
+        4,
+        9,
+        14,
+        16,
+        19,
+        26,
+        33,
+        34,
+        38,
+        50,
+        51,
+        53,
+        54,
+        56,
+        58,
+        61,
+        63,
+        66,
+        69,
+        74,
+        75,
+        78,
+        84,
+        96,
+        99
+      ],
+      "top_k_p": {
+        "12": 0.6452,
+        "20": 0.41,
+        "30": 0.7248
+      },
+      "mannwhitney_U": 1019.5,
+      "mannwhitney_p": 0.3663
+    },
+    "misses": {
+      "n": 24,
+      "dropped_by_immune_filter": [
+        "C5AR1",
+        "CD2",
+        "CD4",
+        "FCGR1A",
+        "FCGR3A",
+        "ICAM1",
+        "PTPRC"
+      ],
+      "dropped_by_fc_cutoff": [
+        "ADM",
+        "ANGPT2",
+        "CXCR4",
+        "EGFR",
+        "ENPP3",
+        "FLT1",
+        "HAVCR2",
+        "ITGA5",
+        "LOXL2",
+        "MET",
+        "MMP14",
+        "P2RX7",
+        "PGF",
+        "SERPINE1",
+        "TGFB3",
+        "VIM",
+        "VWF"
+      ]
+    }
+  },
+  "ranking_given_selection_LEGACY": {
+    "caveat": "conditional on selection: permutes only the 12 survivors, so a positive dropped earlier in the cascade is invisible. Not the headline result; see cascade_test and ranking_test.",
+    "ranks_within_12": {
+      "CD70": 1,
+      "CA9": 2
+    },
+    "both_within_top": 2,
+    "hypergeom_p": 0.0152
+  },
+  "immune_filter": {
+    "definition": "Spearman rho vs 16-marker leukocyte signature across 110 tumours; exclude rho>=0.40",
+    "n_dropped": 33,
+    "CD70_rho": 0.118
+  },
+  "driver_overlap": "0/5 mutation drivers appear in the surface/secreted set"
 }

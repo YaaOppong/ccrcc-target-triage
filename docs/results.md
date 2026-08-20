@@ -5,22 +5,32 @@
 Starting from 11,710 proteins measured in CPTAC ccRCC, we kept those over-produced in tumour at
 both the protein and RNA level (→ 310), narrowed to the ones a drug can physically reach on the
 cell surface or in secretions (→ 101), removed immune-cell decoys, and took the **top 12** as the
-candidate list. Each of the 12 was scored 0–5 on four qualities — overexpression, drug-reachability
+shortlist. **All 101** were scored 0–5 on four qualities — overexpression, drug-reachability
 (tractability), safety and selectivity — from public databases (UniProt, DepMap, gnomAD, HPA);
 those four combine, by fixed weights, into a single **0–100 composite** that ranks them. The whole
-pipeline was run **blind to drug and trial information**. Only at the end did we cross-reference the
-ranking against clinical-trial data — and the two ccRCC antigens that *already* have a direct
-therapeutic (CA9, CD70) both landed in the top 3.
+pipeline was run **blind to drug and trial information**. Only at the end did we cross-reference
+the ranking against clinical-trial data. CD70 and CA9 rank #2 and #4 of 101 — but on a properly
+specified null the method does not significantly enrich for clinically-validated targets.
 
 ## Headline
 
 A single expression-driven method, run **blind to all drug and clinical-trial information**,
-ranks 12 surface/secreted candidates in ccRCC. When drug status is revealed afterwards, the two
-ccRCC antigens that already have a direct therapeutic — **CA9** and **CD70** — both land in the
-**top 3 of 12** (CD70 #1, CA9 #3). Under a hypergeometric null this is unlikely by chance
-(**p = 0.0455**); the direct-drug antigens also score higher than the rest as a group
-(one-sided Mann–Whitney **p = 0.0303**). The method recovers targets already in clinical
-development without ever being told what is drugged.
+scores 101 surface/secreted candidates in ccRCC and shortlists 12. When drug status is revealed
+afterwards, **CD70 (#2), CA9 (#4) and ENPP3 (#9) of 101** all carry direct-acting agents — a real
+signal at the top of the ranking.
+
+That signal does not survive as a claim about the method. Under a rule applied to all 101
+candidates there are **14 positives, not 2**, and against that denominator neither the selection
+cascade (hypergeometric **p = 0.52**) nor the composite ranking (Mann–Whitney **p = 0.32**)
+significantly enriches for them.
+
+An earlier version of this analysis reported **p = 0.0455**. That statistic permuted only the 12
+survivors, so it was conditional on the selection step it was meant to test, and a positive
+dropped anywhere in the 11,710 → 12 cascade could not register. It is retained, relabelled, as
+`ranking_given_selection_LEGACY`, where it recomputes to p = 0.0152 under the corrected
+association score. It became *more* significant while the claim it supported became weaker —
+which is the clearest possible demonstration that it was never testing the right thing.
+The correction is the main result of this write-up.
 
 ## Ranked candidates (drug-blind composite)
 
@@ -44,14 +54,18 @@ Full table with all evidence columns: `results/scorecards/scorecard_clean.csv`.
 ## Blind recovery of drugged antigens
 
 - **CA9** is a fully mechanical recovery: it survived every selection filter with no manual
-  intervention and carries the strongest RNA overexpression in the set (log2FC = 6.02, RNA rank
-  1 of 12). It is #3 on the composite.
+  intervention and carries the strongest RNA overexpression in the set (log2FC = 6.02). It is
+  #4 of 101 on the composite.
 - **CD70** is retained on its own data — it is tumour-intrinsic by the immune filter
-  (ρ = 0.118, not significant), not a leukocyte marker — and tops the composite at 79.7.
-- Both direct-drug antigens fall in the top 3 → hypergeometric **p = 0.0455**. (Both-in-top-2 is
-  not met: HILPDA is #2.)
-- Composite scores of the direct-drug antigens vs the rest: one-sided Mann–Whitney **U = 19,
-  p = 0.0303**.
+  (ρ = 0.118, not significant), not a leukocyte marker — and is #2 of 101.
+- **Cascade test** (did selection concentrate positives?): 2 of 14 positives retained in the 12,
+  against 1.66 expected by chance → hypergeometric **p = 0.52**.
+- **Ranking test** (does the composite rank positives highly across all 101?): one-sided
+  Mann–Whitney **p = 0.32**; positives at ranks 2, 4, 9, 16, 33, 34, 51, 54, 58, 61, 66, 84, 96, 99.
+- **12 of 14 positives are missed** — 2 by the immune filter (CD4, FCGR3A, both correctly
+  identified as infiltrate-tracking) and 10 by the top-12 fold-change cut. **ENPP3**, target of
+  the ADC AGS-16C3F, scores #9 of 101 and is discarded by that cut: the shortlisting rule, not
+  the rubric, is what loses it.
 
 Statistics: `results/scorecards/recovery_stats.json`.
 

@@ -1,0 +1,102 @@
+gene,uniprot,prot_log2fc,rna_log2fc,immune_rho,immune_infiltration_flag,dropped_by,retained,locations
+HILPDA,Q9Y5L2,2.739471042956206,4.830710835194351,-0.10163934426229508,False,,True,Lipid droplet; Secreted; Membrane
+COL23A1,Q86Y22,2.4604581196404345,3.945564121173724,-0.06581458145814582,False,,True,Cell membrane
+FCER1G,P30273,2.396871802576188,2.444300780014898,0.8034488199625814,True,immune_filter,False,Cell membrane
+CD70,P32970,2.3618215456879423,4.273539989349584,0.11809390708473277,False,,True,Cell membrane
+POSTN,Q15063,2.3486344621342212,1.0290294454290394,0.29821147252339913,False,,True,"Golgi apparatus; Secreted; Secreted, extracellular space, extracellular matrix"
+SLC16A3,O15427,2.243859927605212,3.2995856344309553,0.13735319973852084,False,,True,Cell membrane; Basolateral cell membrane
+CA9,Q16790,2.2258467469171483,6.021210562019265,-0.1956630525437865,False,,True,"Nucleus; Nucleus, nucleolus; Cell membrane; Cell projection, microvillus membrane"
+TYROBP,O43914,2.2084089679729395,2.639084488199237,0.6767847079773686,True,immune_filter,False,Cell membrane
+HAPLN1,P10915,2.0979536931835825,1.4423705214533813,0.00883168406104186,False,,True,"Secreted, extracellular space, extracellular matrix"
+SLC2A1,P11166,2.004596076128799,2.2999812482072026,0.11621847034691073,False,,True,Cell membrane; Melanosome; Photoreceptor inner segment
+ITGAX,P20702,1.8404775456588236,2.0867956862293005,0.5984401415594076,True,immune_filter,False,Cell membrane
+FCGR3A,P08637,1.8293696540061244,3.460334599107505,0.6689854157744065,True,immune_filter,False,Cell membrane; Secreted
+SCARB1,Q8WTV0,1.8026981291083164,2.8858595044619575,-0.2040574352500958,False,,True,"Cell membrane; Membrane, caveola"
+HAVCR1,Q96D42,1.795411479577107,1.8579896970169978,0.08808222283799784,False,,True,"Cell membrane; Cell projection, phagocytic cup; Cytoplasmic vesicle, phagosome"
+SLC2A3,P11169,1.7335228745480538,1.6933197724881732,0.04009196853233551,False,,True,Cell membrane; Perikaryon; Cell projection
+NPTX2,P47972,1.7272458016012047,4.031247709357572,0.2704874835309618,False,,True,Secreted
+LOXL2,Q9Y4K0,1.705756345283926,2.381459519775941,0.10969050785564546,False,fc_rank_cutoff,False,"Secreted, extracellular space, extracellular matrix, basement membrane; Nucleus; Chromosome; Endoplasmic reticulum"
+ANGPTL4,Q9BY76,1.6904325344763043,5.242656567444215,-0.036846020332258866,False,fc_rank_cutoff,False,"Secreted; Secreted, extracellular space, extracellular matrix"
+RHBDL2,Q9NX52,1.6825632169777944,0.24129196203251257,0.28442776735459663,False,fc_rank_cutoff,False,Cell membrane
+P2RX7,Q99572,1.673670402568002,2.017586527287987,0.2900038744672607,False,fc_rank_cutoff,False,Cell membrane
+TNFAIP6,P98066,1.6712805078352384,4.283521578891095,-0.07402110997616616,False,fc_rank_cutoff,False,Secreted
+CYBB,P04839,1.6605407772726484,2.1970574577952102,0.750711178234114,True,immune_filter,False,Cell membrane
+ESM1,Q9NQ30,1.6559442753758309,3.2429304313866814,-0.05319743739079791,False,fc_rank_cutoff,False,Secreted
+ADAMTS7,Q9UKP4,1.6170601164105065,0.7023760857075914,-0.1716361931551805,False,fc_rank_cutoff,False,"Secreted, extracellular space, extracellular matrix"
+LPCAT1,Q8NF37,1.6003486750701235,2.314677228946867,0.16199535649076932,False,fc_rank_cutoff,False,Endoplasmic reticulum membrane; Golgi apparatus membrane; Cell membrane; Lipid droplet
+CDH4,P55283,1.599827873690112,1.0322120324427013,-0.166046123923312,False,fc_rank_cutoff,False,Cell membrane
+CTHRC1,Q96CG8,1.587408541912752,1.8265089955920186,0.35599486058201657,False,fc_rank_cutoff,False,"Secreted, extracellular space, extracellular matrix"
+ANGPT2,O15123,1.541609291246555,2.2545580313674103,0.012104681829452471,False,fc_rank_cutoff,False,Secreted
+ENPP3,O14638,1.505828772400692,3.788062768143395,-0.2806888623402385,False,fc_rank_cutoff,False,Cell membrane; Apical cell membrane; Secreted
+IL32,P24001,1.4961756957689611,1.0068945302834633,0.10895140664961636,False,fc_rank_cutoff,False,Secreted
+EMILIN2,Q9BXX0,1.4914721698240385,1.302853046271891,0.4114825417577711,True,immune_filter,False,"Secreted, extracellular space, extracellular matrix"
+COL5A3,P25940,1.467113564441517,1.4244060717363871,-0.17020940874151885,False,fc_rank_cutoff,False,"Secreted, extracellular space, extracellular matrix; Secreted"
+LOX,P28300,1.4667598357636766,2.8033500636517186,0.243504722403805,False,fc_rank_cutoff,False,"Secreted; Secreted, extracellular space"
+ITGB2,P05107,1.4593389519161302,2.293736261461577,0.5968712665960373,True,immune_filter,False,Cell membrane; Membrane raft
+FLT1,P17948,1.4386262378746737,1.8876738739065124,-0.0838968145397694,False,fc_rank_cutoff,False,Cell membrane; Endosome; Secreted; Secreted; Secreted; Cytoplasm; Cytoplasm; Cytoplasm
+BTN3A2,P78410,1.4221095209975878,1.9910206711474019,0.3898921832884097,False,fc_rank_cutoff,False,Cell membrane
+C5AR1,P21730,1.4178547958179195,1.3025853773633442,0.5387237762237762,True,immune_filter,False,Cell membrane; Cytoplasmic vesicle
+LOXL3,P58215,1.4002641782869696,0.9067951906461547,0.17711856960857533,False,fc_rank_cutoff,False,"Secreted, extracellular space; Cytoplasm; Nucleus; Secreted, extracellular space; Cytoplasm; Secreted, extracellular space"
+PTPRC,P08575,1.3941862789390809,2.0094486536454395,0.8659062732457228,True,immune_filter,False,Cell membrane; Membrane raft; Synapse
+HAVCR2,Q8TDQ0,1.3766862761090264,0.9458243273536491,0.15110965564148424,False,fc_rank_cutoff,False,Cell membrane; Cell junction; Cell membrane
+ITGAL,P20701,1.374513406186873,1.600215503069981,0.789482226179474,True,immune_filter,False,Cell membrane; Membrane raft
+FCGR1A,P12314,1.3689990096925584,2.0031199647734246,0.7724770642201836,True,immune_filter,False,Cell membrane
+VCAM1,P19320,1.364164976049071,1.6930866153176245,0.2345873813763722,False,fc_rank_cutoff,False,Cell membrane; Secreted
+CD53,P19397,1.3561486306002706,2.2319302378327457,0.4834179925276017,True,immune_filter,False,Cell membrane; Cell junction; Membrane; Synapse
+TGFB3,P10600,1.3486868903116214,0.43137462016966666,0.303670745272525,False,fc_rank_cutoff,False,"Secreted, extracellular space, extracellular matrix; Secreted"
+PLOD3,O60568,1.3380107921066462,1.0561422152997362,0.12950882492166896,False,fc_rank_cutoff,False,"Rough endoplasmic reticulum; Endoplasmic reticulum lumen; Endoplasmic reticulum membrane; Secreted; Secreted, extracellular space"
+ERO1A,Q96HE7,1.3287100796544005,1.4721908266163481,-0.0767080675337556,False,fc_rank_cutoff,False,"Endoplasmic reticulum membrane; Golgi apparatus lumen; Secreted; Cell projection, dendrite"
+LAIR1,Q6GTX8,1.3281850779137339,2.1746462050535698,0.7877050485746138,True,immune_filter,False,Cell membrane
+CD48,P09326,1.3212745747327228,1.6331795843430112,0.73860821819701,True,immune_filter,False,Cell membrane; Membrane raft; Secreted
+ICAM1,P05362,1.3038756179604747,1.6662378655545962,0.40914726235827154,True,immune_filter,False,Cell membrane
+LILRB2,Q8N423,1.302568053712596,1.2306653490841903,0.6890469738030713,True,immune_filter,False,Cell membrane
+NCKAP1L,P55160,1.2982732893675493,2.0323453051563645,0.7955413294862836,True,immune_filter,False,Cell membrane; Cytoplasm
+CSPG4,Q6UVK1,1.2890925692346213,1.7195931562234428,-0.2066451772873791,False,fc_rank_cutoff,False,"Cell membrane; Apical cell membrane; Cell projection, lamellipodium membrane; Cell surface"
+MMP14,P50281,1.2875762475567074,1.5411496270266944,0.33125352207921016,False,fc_rank_cutoff,False,Cell membrane; Melanosome; Cytoplasm
+SERPINE1,P05121,1.283984303006128,1.712213840101211,0.35316367242972746,False,fc_rank_cutoff,False,Secreted
+COL5A1,P20908,1.2825920648679694,0.7999753094968864,-0.0818746470920384,False,fc_rank_cutoff,False,"Secreted, extracellular space, extracellular matrix"
+COL3A1,P02461,1.2820392988449167,1.1811520546954597,0.061614408403399226,False,fc_rank_cutoff,False,"Secreted, extracellular space, extracellular matrix"
+CD163,Q86VB7,1.2805424215249044,1.9343489650177301,0.6854630168899243,True,immune_filter,False,Secreted; Cell membrane
+CD36,P16671,1.2731621630440466,2.512250372056947,-0.19608682911435205,False,fc_rank_cutoff,False,Cell membrane; Membrane raft; Golgi apparatus; Apical cell membrane
+VWF,P04275,1.2710282397055044,3.515983389860927,-0.11089872190789622,False,fc_rank_cutoff,False,"Secreted; Secreted, extracellular space, extracellular matrix"
+BTN3A1,O00481,1.262818374514411,1.8721018003908543,0.2685277719335157,False,fc_rank_cutoff,False,Cell membrane
+NEFL,P07196,1.255915727618362,1.0822347200381164,0.2903906408493564,False,fc_rank_cutoff,False,"Cell projection, axon; Cytoplasm, cytoskeleton"
+COL8A1,P27658,1.2469592740730537,2.0211093299659,0.17557498047711412,False,fc_rank_cutoff,False,"Secreted, extracellular space, extracellular matrix, basement membrane"
+ADM,P35318,1.244781602247817,2.533181217775164,-0.1032967032967033,False,fc_rank_cutoff,False,Secreted
+MSR1,P21757,1.2384488866548828,2.3722791892385837,0.736239659175439,True,immune_filter,False,Cell membrane
+SLC1A4,P43007,1.2335500489593052,1.340724894970431,0.13612670408981556,False,fc_rank_cutoff,False,Cell membrane; Melanosome membrane
+CDH13,P55290,1.1936495189228857,1.7868589901153153,-0.2796068796068796,False,fc_rank_cutoff,False,Cell membrane; Cytoplasm
+KEL,P23276,1.1876904253549738,0.0159643814026168,0.1974025974025974,False,fc_rank_cutoff,False,Cell membrane
+GPNMB,Q14956,1.1844474112004475,2.2098404781702823,0.3061695557108401,False,fc_rank_cutoff,False,Cell membrane; Melanosome membrane; Early endosome membrane
+CD68,P34810,1.1831803231629403,2.318801115813332,0.5487768045907581,True,immune_filter,False,Cell membrane; Endosome membrane; Lysosome membrane
+VIM,P08670,1.1656076837750002,2.711802080057054,0.011076798232761535,False,fc_rank_cutoff,False,"Cytoplasm; Cytoplasm, cytoskeleton; Nucleus matrix; Cell membrane; Cell projection, axon"
+LILRB4,Q8NHJ6,1.1648915100622752,2.173780239037048,0.6594746716697936,True,immune_filter,False,Cell membrane
+HAPLN3,Q96S86,1.1383838410026783,1.3867003210300533,0.30531341317858174,False,fc_rank_cutoff,False,"Secreted, extracellular space, extracellular matrix"
+TRPV2,Q9Y5S1,1.1333950449962102,1.7054086228588865,0.6163498552714035,True,immune_filter,False,Cell membrane; Cytoplasm; Melanosome
+COL5A2,P05997,1.1322113010637596,1.5476977291006646,0.07589658048373643,False,fc_rank_cutoff,False,"Secreted, extracellular space, extracellular matrix"
+CD4,P01730,1.1310606138126962,1.8456494048180363,0.8296147690643103,True,immune_filter,False,Cell membrane
+CD300A,Q9UGN4,1.1267974763558732,2.385410913264715,0.5215116787682618,True,immune_filter,False,Cell membrane
+CXCR4,P61073,1.1177218881130928,2.734301611401533,-0.23098807309333624,False,fc_rank_cutoff,False,Cell membrane; Cell junction; Early endosome; Late endosome; Lysosome
+GZMA,P12544,1.1175878880415748,2.2834326936138196,0.5185357167008543,True,immune_filter,False,Secreted; Cytoplasmic granule
+HVCN1,Q96D96,1.1082961818446055,0.997542150757446,0.4424552071668533,True,immune_filter,False,"Cell membrane; Apical cell membrane; Cytoplasmic vesicle, phagosome membrane; Cell projection, cilium, flagellum membrane"
+SPARC,P09486,1.1072045874754621,1.832137056541117,-0.08213601424610599,False,fc_rank_cutoff,False,"Secreted, extracellular space, extracellular matrix, basement membrane"
+SORCS3,Q9UPU3,1.0958691334568982,1.0189973038925015,-0.17792207792207793,False,fc_rank_cutoff,False,Cell membrane; Synaptic cell membrane; Postsynaptic density
+NCEH1,Q6PIU2,1.0859924359128412,0.6408125192947907,0.22687825440119017,False,fc_rank_cutoff,False,Cell membrane; Microsome
+LILRB1,Q8NHL6,1.0826035308686979,1.6925820995013878,0.2777777777777778,False,fc_rank_cutoff,False,Cell membrane; Secreted
+MET,P08581,1.0823020151609124,1.3619476278077238,0.04668304668304668,False,fc_rank_cutoff,False,Membrane; Secreted
+IGFBP3,P17936,1.0765831651236546,3.8190024959795146,0.11890539413475193,False,fc_rank_cutoff,False,Secreted; Nucleus
+OLFML2A,Q68BL7,1.0749826614764502,1.5817177640356244,-0.33085106382978724,False,fc_rank_cutoff,False,Secreted
+IL4I1,Q96RQ9,1.0745437758678307,1.231564004091844,0.49208123887022975,True,immune_filter,False,"Secreted; Lysosome; Cytoplasmic vesicle, secretory vesicle, acrosome"
+PGF,P49763,1.065980774221667,3.118450755459212,-0.15690123829658711,False,fc_rank_cutoff,False,Secreted
+LY86,O95711,1.06038285099361,2.032819046574752,0.6098901098901098,True,immune_filter,False,"Secreted, extracellular space"
+PRF1,P14222,1.0599162620886644,2.048417664037126,0.034880418366656896,False,fc_rank_cutoff,False,Cytolytic granule; Secreted; Cell membrane; Endosome lumen
+CD180,Q99467,1.059865171185351,1.1182099241534216,0.5268579672249396,True,immune_filter,False,Cell membrane
+EGFR,P00533,1.0520515650504476,1.4434402499266317,-0.2518089398823344,False,fc_rank_cutoff,False,Cell membrane; Endoplasmic reticulum membrane; Golgi apparatus membrane; Nucleus membrane; Endosome; Endosome membrane; Nucleus; Secreted
+ECSCR,Q19T08,1.0511628897245744,1.2559721388380964,-0.21959423761051036,False,fc_rank_cutoff,False,Cell membrane; Cytoplasm
+PECAM1,P16284,1.0382160163600027,1.5869380794692178,-0.13211460000450828,False,fc_rank_cutoff,False,Cell membrane; Cell membrane; Membrane raft; Cell junction; Cell junction
+GZMK,P49863,1.0361049287680761,2.0029002759994006,0.5445378151260504,True,immune_filter,False,Secreted; Cell surface; Cytoplasmic granule
+IGFLR1,Q9H665,1.0339380134171536,0.8502153772910812,0.14995076243621497,False,fc_rank_cutoff,False,Cell membrane
+ADGRE2,Q9UHX3,1.031860394311494,0.8483191445987692,0.5043898156277437,True,immune_filter,False,"Cell membrane; Cell projection, ruffle membrane"
+CD2,P06729,1.0195172382929099,2.0589343713452575,0.7132655591371188,True,immune_filter,False,Cell membrane
+ITGAM,P11215,1.0184752624191589,1.6694502951281587,0.6389513784009196,True,immune_filter,False,Cell membrane; Membrane raft
+ITGA5,P08648,1.012284830137491,2.1402255844802154,0.20584270676013797,False,fc_rank_cutoff,False,"Cell membrane; Cell junction, focal adhesion"

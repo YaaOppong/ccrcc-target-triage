@@ -4,6 +4,10 @@ data/
 *.tsi
 *.cptac
 
+# ---- memoised API responses (regenerated on demand) ----
+_cache/
+_cache_ct/
+
 # ---- scratch / intermediate ----
 handoff/
 _scratch/

@@ -40,16 +40,27 @@ tumour vs NAT), 110 tumours / 84 normals.
 ## Dimension 2 — Tractability (intrinsic surface access)
 *How accessible is the protein to a surface-directed modality — antibody, ADC, CAR, radioligand?*
 
-Scored on **intrinsic localisation only** — no clinical-status bucket, no ligand/PDB
-counts, no drug precedent (all of which leak drug knowledge).
+Scored on **intrinsic localisation evidence only** — the clinical-status buckets
+(`Approved Drug`, `Advanced Clinical`, `Phase 1 Clinical`) are explicitly removed before
+scoring, as are ligand/PDB counts and drug precedent, all of which leak drug knowledge.
 
 | Score | Anchor |
 |---|---|
-| 3.0 | Cell-surface single-pass / GPI-anchored / broad membrane transporter — directly antibody/ADC/CAR/radioligand-accessible |
-| 1.5 | Secreted, extracellular-matrix-embedded, or lipid-droplet / intracellular product — engageable but not a clean cell-surface epitope |
+| 3.0 | Localisation corroborated by **two orthogonal high-confidence sources** — UniProt curated localisation *and* GO cellular component — i.e. a clean, well-evidenced cell-surface epitope |
+| 1.5 | Supported by only one high-confidence source, or by medium-confidence calls / signal-peptide-and-topology prediction alone — engageable, but the surface evidence is thinner |
 | 0 | No surface or secreted access |
 
-**Data sources:** UniProt subcellular localisation; membrane-topology annotation.
+**Data sources:** Open Targets antibody-tractability buckets, which aggregate UniProt
+subcellular localisation, GO cellular component, and SignalP/TMHMM topology prediction.
+
+**Note on an earlier version.** This dimension was previously implemented as a hardcoded
+five-gene list (`HILPDA, COL23A1, NPTX2, HAPLN1, HAVCR1` → 1.5, everything else → 3.0) inside a
+function documented as localisation-derived; the localisation variable it computed was never
+used. It was also load-bearing — flattening it moved the then-headline p-value from 0.046 to
+0.091. The rule above replaces it with a derived criterion and reproduces the same twelve
+assignments. That agreement was **verified after** the rule was chosen, and the rule uses a
+pre-existing external evidence ladder rather than thresholds tuned here, but it is recorded
+plainly so the reader can discount it as they see fit.
 
 ---
 
