@@ -65,8 +65,8 @@ text(L, 0.612, "in clear cell RCC", 49, ACCENT, "bold")
 # Reading left to right IS the method; the arrows carry the narrowing. Spread
 # across the full measure so the row balances the headline above it.
 stages = [(0.070, "11,710", "proteins\nmeasured",                 36, MUTED),
-          (0.375, "101",    "surface / secreted\ndrug-reachable", 36, MUTED),
-          (0.715, "12",     "scored\ncandidates",                 60, ACCENT)]
+          (0.375, "101",    "surface / secreted\nall scored",     36, MUTED),
+          (0.715, "12",     "shortlisted\ncandidates",            60, ACCENT)]
 
 for x, num, cap, size, col in stages:
     text(x, 0.360, num, size, col, "bold")
@@ -85,7 +85,7 @@ ax.add_patch(FancyBboxPatch((L - 0.024, 0.055), (R - L) + 0.024, 0.135,
                             boxstyle="round,pad=0,rounding_size=0.012",
                             facecolor=TINT, edgecolor=TINTED,
                             linewidth=1.2, transform=ax.transAxes))
-text(L, 0.103, "Both antigens with agents in trials ranked #1 and #3 — blind",
+text(L, 0.103, "CD70 #2 · CA9 #4 · ENPP3 #9 of 101 — ranked blind to drug status",
      20, INK, "bold")
 
 fig.savefig("figures/og_card.png", dpi=DPI, facecolor=BG)
