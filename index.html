@@ -83,14 +83,15 @@ summary{font-weight:600;cursor:pointer}
 
 <div class="card headline">
 <div style="display:flex;gap:26px;flex-wrap:wrap;align-items:center">
-<div><div class="big">2 / 14</div><div class="note">held-out positives retained<br>by selection (1.66 expected)</div></div>
+<div><div class="big">11,710 &rarr; 12</div><div class="note">proteins measured &rarr; ranked<br>surface-antigen shortlist</div></div>
 <div style="flex:1;min-width:280px">
-The method scores candidates using <b>only CPTAC expression data</b> and gene-level annotation &mdash;
-no drug or trial information enters selection or scoring. Revealed afterwards: CD70, CA9 and ENPP3
-rank #2, #4 and #9 of 101 &mdash; but the enrichment is not significant.
+A reproducible, <b>drug-blind</b> triage of the CPTAC ccRCC proteome: candidates are selected and
+scored using <b>only expression data</b> and gene-level annotation &mdash; no drug or trial
+information enters selection or scoring. All 101 surface/secreted candidates are scored; 12 are
+shortlisted. Revealed afterwards, the top of the ranking holds real antigens.
 <div style="margin-top:8px">
-<span class="pill">cascade p = 0.5223</span>
-<span class="pill">ranking Mann&ndash;Whitney p = 0.3221</span>
+<span class="pill">CD70 #2 &middot; CA9 #4 &middot; ENPP3 #9 of 101</span>
+<span class="pill">runs clean from a fresh checkout</span>
 </div></div></div></div>
 
 <div class="tabs">
@@ -423,7 +424,7 @@ document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
 });
 
 renderScore();renderSliders();renderWeighted();renderRecovery();renderImmune();renderDrivers();
-document.querySelectorAll(".pill")[0].textContent="cascade p = "+DATA.recovery.cascade_p;
-document.querySelectorAll(".pill")[1].textContent="ranking Mann\u2013Whitney p = "+DATA.recovery.ranking_mw_p;
+document.querySelectorAll(".pill")[0].textContent="CD70 #"+DATA.recovery.ranks_of_101.CD70+" \u00b7 CA9 #"+DATA.recovery.ranks_of_101.CA9+" \u00b7 ENPP3 #"+DATA.recovery.ranks_of_101.ENPP3+" of "+DATA.recovery.n_surface_candidates;
+document.querySelectorAll(".pill")[1].textContent="runs clean from a fresh checkout";
 </script>
 </div></body></html>

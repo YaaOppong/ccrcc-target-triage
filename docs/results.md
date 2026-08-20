@@ -19,18 +19,7 @@ scores 101 surface/secreted candidates in ccRCC and shortlists 12. When drug sta
 afterwards, **CD70 (#2), CA9 (#4) and ENPP3 (#9) of 101** all carry direct-acting agents — a real
 signal at the top of the ranking.
 
-That signal does not survive as a claim about the method. Under a rule applied to all 101
-candidates there are **14 positives, not 2**, and against that denominator neither the selection
-cascade (hypergeometric **p = 0.52**) nor the composite ranking (Mann–Whitney **p = 0.32**)
-significantly enriches for them.
-
-An earlier version of this analysis reported **p = 0.0455**. That statistic permuted only the 12
-survivors, so it was conditional on the selection step it was meant to test, and a positive
-dropped anywhere in the 11,710 → 12 cascade could not register. It is retained, relabelled, as
-`ranking_given_selection_LEGACY`, where it recomputes to p = 0.0152 under the corrected
-association score. It became *more* significant while the claim it supported became weaker —
-which is the clearest possible demonstration that it was never testing the right thing.
-The correction is the main result of this write-up.
+How well that generalises is evaluated in **Held-out recovery** below.
 
 ## Ranked candidates (drug-blind composite)
 
@@ -51,7 +40,27 @@ The correction is the main result of this write-up.
 
 Full table with all evidence columns: `results/scorecards/scorecard_clean.csv`.
 
-## Blind recovery of drugged antigens
+## Held-out recovery
+
+The positive set is defined **by rule over all 101 surface candidates** (an agent whose Open
+Targets mechanism target is that gene, appearing in a ClinicalTrials.gov renal-cell-carcinoma
+study), fixed before inspecting which genes it flags. An earlier version instead hand-listed two
+genes chosen after seeing the final 12, which made a miss structurally unobservable.
+
+The top-of-ranking signal does not generalise. Under the rule applied to all 101
+candidates there are **14 positives, not 2**, and against that denominator neither the selection
+cascade (hypergeometric **p = 0.52**) nor the composite ranking (Mann–Whitney **p = 0.32**)
+significantly enriches for them.
+
+An earlier version of this analysis reported **p = 0.0455**. That statistic permuted only the 12
+survivors, so it was conditional on the selection step it was meant to test, and a positive
+dropped anywhere in the 11,710 → 12 cascade could not register. It is retained, relabelled, as
+`ranking_given_selection_LEGACY`, where it recomputes to p = 0.0152 under the corrected
+association score. It became *more* significant while the claim it supported became weaker —
+which is the clearest possible demonstration that it was never testing the right thing.
+The correction is the main methodological result of this write-up.
+
+### Per-gene detail
 
 - **CA9** is a fully mechanical recovery: it survived every selection filter with no manual
   intervention and carries the strongest RNA overexpression in the set (log2FC = 6.02). It is

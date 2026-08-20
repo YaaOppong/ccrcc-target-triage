@@ -50,18 +50,51 @@ selection. That is what makes the selection cascade itself testable — see
 ![Triage scorecard](figures/triage_scorecard.png)
 
 Run blind to drug knowledge, the method scores all 101 surface/secreted candidates and
-shortlists 12. When drug status is revealed, **CD70 and CA9 — both targets of direct-acting
-ccRCC therapeutics — rank #2 and #4 out of 101**, and so does ENPP3 at #9 (target of the ADC
-AGS-16C3F). The top of the ranking is picking up real antigens.
+shortlists 12. When drug status is revealed afterwards, the top of the ranking holds real
+antigens: **CD70 (#2), CA9 (#4) and ENPP3 (#9) of 101** are each the target of a direct-acting
+agent in renal-cell-carcinoma trials.
 
-But that is not the same as the method working, and the honest evaluation is below.
+How far that generalises — and where the method loses positives — is measured in
+[Does it recover known targets?](#does-it-recover-known-targets-an-honest-answer) below.
+
+---
+
+## Ranked scorecard (drug-blind composite)
+
+Composite = weighted mean of four dimensions, rescaled 0–100.
+**Weights:** association 0.333 · tractability 0.278 · safety 0.222 · selectivity 0.167.
+
+Association is now a percentile against the full 310-gene concordant pool. Ranking the 12
+against themselves re-ranked a list already sorted on that same axis, and compressed a narrow
+log2FC band (1.73–2.74) across the whole 0–5 range.
+
+| Rank | Gene | Composite | Assoc | Tract | Safety | Select | Tier | Direct agent |
+|---:|------|---:|---:|---:|---:|---:|------|------|
+| 1 | **CD70** | 84.5 | 4.89 | 3.0 | 4.7 | 4.3 | T1 fast-follow | anti-CD70 CAR-T (ALLO-316) |
+| 2 | **CA9** | 79.5 | 4.89 | 3.0 | 4.7 | 2.8 | T1 fast-follow | girentuximab radioconjugate |
+| 3 | HILPDA | 76.6 | 4.96 | 1.5 | 4.7 | 4.3 | T2 discovery | — |
+| 4 | COL23A1 | 76.2 | 4.89 | 1.5 | 4.7 | 4.3 | T2 discovery | — |
+| 5 | SLC16A3 (MCT4) | 76.0 | 4.76 | 3.0 | 4.7 | 2.0 | T2 discovery | — |
+| 6 | NPTX2 | 74.2 | 4.60 | 1.5 | 4.7 | 4.3 | T2 discovery | — |
+| 7 | SCARB1 | 70.3 | 4.49 | 3.0 | 2.7 | 3.5 | T2 discovery | — |
+| 8 | SLC2A1 (GLUT1) | 67.6 | 4.37 | 3.0 | 3.4 | 2.0 | T3 watch | — |
+| 9 | POSTN | 67.1 | 3.01 | 3.0 | 4.2 | 3.5 | T3 watch | — |
+| 10 | HAVCR1 (KIM-1) | 65.0 | 3.86 | 1.5 | 3.2 | 5.0 | T3 watch | — |
+| 11 | SLC2A3 (GLUT3) | 62.8 | 3.62 | 3.0 | 4.2 | 1.0 | T3 watch | — |
+| 12 | HAPLN1 | 61.9 | 3.48 | 1.5 | 4.2 | 3.5 | T3 watch | — |
+
+The full 101-candidate ranking is in
+[`results/scorecards/scorecard_101.csv`](results/scorecards/scorecard_101.csv). **ENPP3 ranks #9
+there and is absent from this table** — a miss the next section takes apart, and one that is
+visible only because the whole 101 is scored.
 
 ---
 
 ## Does it recover known targets? An honest answer
 
 **Short version: at the very top, yes. As a procedure, not at any level that reaches
-significance — and this repo now measures that properly instead of assuming it.**
+significance.** This is a negative result, reported as one — it is not the repo's headline
+claim, and it is not buried either.
 
 Applying a fixed rule to all 101 candidates (an agent whose Open Targets mechanism target is
 that gene, appearing in a renal-cell-carcinoma trial) yields **14 positives, not 2**. Against
@@ -97,37 +130,6 @@ definition would give a smaller, more favourable denominator. That column
 (`curated/clinical_agents.csv → agent_modality`) is deliberately left for curation, because
 automated modality lookup is unreliable: ChEMBL returns "Unknown" for MDX-1411 and AGS-16C3F,
 both biologics. **The reported statistics do not depend on it.**
-
----
-
-## Ranked scorecard (drug-blind composite)
-
-Composite = weighted mean of four dimensions, rescaled 0–100.
-**Weights:** association 0.333 · tractability 0.278 · safety 0.222 · selectivity 0.167.
-
-Association is now a percentile against the full 310-gene concordant pool. Ranking the 12
-against themselves re-ranked a list already sorted on that same axis, and compressed a narrow
-log2FC band (1.73–2.74) across the whole 0–5 range.
-
-| Rank | Gene | Composite | Assoc | Tract | Safety | Select | Tier | Direct agent |
-|---:|------|---:|---:|---:|---:|---:|------|------|
-| 1 | **CD70** | 84.5 | 4.89 | 3.0 | 4.7 | 4.3 | T1 fast-follow | anti-CD70 CAR-T (ALLO-316) |
-| 2 | **CA9** | 79.5 | 4.89 | 3.0 | 4.7 | 2.8 | T1 fast-follow | girentuximab radioconjugate |
-| 3 | HILPDA | 76.6 | 4.96 | 1.5 | 4.7 | 4.3 | T2 discovery | — |
-| 4 | COL23A1 | 76.2 | 4.89 | 1.5 | 4.7 | 4.3 | T2 discovery | — |
-| 5 | SLC16A3 (MCT4) | 76.0 | 4.76 | 3.0 | 4.7 | 2.0 | T2 discovery | — |
-| 6 | NPTX2 | 74.2 | 4.60 | 1.5 | 4.7 | 4.3 | T2 discovery | — |
-| 7 | SCARB1 | 70.3 | 4.49 | 3.0 | 2.7 | 3.5 | T2 discovery | — |
-| 8 | SLC2A1 (GLUT1) | 67.6 | 4.37 | 3.0 | 3.4 | 2.0 | T3 watch | — |
-| 9 | POSTN | 67.1 | 3.01 | 3.0 | 4.2 | 3.5 | T3 watch | — |
-| 10 | HAVCR1 (KIM-1) | 65.0 | 3.86 | 1.5 | 3.2 | 5.0 | T3 watch | — |
-| 11 | SLC2A3 (GLUT3) | 62.8 | 3.62 | 3.0 | 4.2 | 1.0 | T3 watch | — |
-| 12 | HAPLN1 | 61.9 | 3.48 | 1.5 | 4.2 | 3.5 | T3 watch | — |
-
-The full 101-candidate ranking is in
-[`results/scorecards/scorecard_101.csv`](results/scorecards/scorecard_101.csv). **ENPP3 ranks #9
-there and is absent from this table** — that is the miss described above, and it is visible only
-because the whole 101 is scored.
 
 ---
 

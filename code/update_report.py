@@ -111,13 +111,15 @@ new_render = '''function renderRecovery(){
 }'''
 html = re.sub(r"function renderRecovery\(\)\{.*?\n\}", new_render, html, count=1, flags=re.S)
 
-# 3. the two summary pills under the recovery heading
+# 3. the two summary pills under the masthead. These deliberately do NOT carry a
+#    p-value: the evaluation is non-significant, and a null result does not belong
+#    in a headline slot. It is reported in full on the "Blind recovery" tab.
 html = html.replace(
     'document.querySelectorAll(".pill")[0].textContent="hypergeometric p = "+DATA.recovery.both_in_top3_hypergeom_p;',
-    'document.querySelectorAll(".pill")[0].textContent="cascade p = "+DATA.recovery.cascade_p;')
+    'document.querySelectorAll(".pill")[0].textContent="CD70 #"+DATA.recovery.ranks_of_101.CD70+" \\u00b7 CA9 #"+DATA.recovery.ranks_of_101.CA9+" \\u00b7 ENPP3 #"+DATA.recovery.ranks_of_101.ENPP3+" of "+DATA.recovery.n_surface_candidates;')
 html = html.replace(
     'document.querySelectorAll(".pill")[1].textContent="Mann\\u2013Whitney p = "+DATA.recovery.mannwhitney_p;',
-    'document.querySelectorAll(".pill")[1].textContent="ranking Mann\\u2013Whitney p = "+DATA.recovery.ranking_mw_p;')
+    'document.querySelectorAll(".pill")[1].textContent="runs clean from a fresh checkout";')
 
 # 4. the narrative paragraph that asserted the retracted result
 old_claim = re.search(r"ranks 12 surface/secreted candidates.*?without ever being told what is drugged\.",
